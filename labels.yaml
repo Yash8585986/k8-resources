@@ -3,7 +3,10 @@ kind: Pod
 metadata:
   name: nginx
   namespace: my-custom-namespace
-
+labels:
+  project: roboshop
+  purpose: poc
+  environment: Dev
 spec:
   containers:
   - name: nginx
