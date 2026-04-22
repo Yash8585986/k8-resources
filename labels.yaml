@@ -4,7 +4,7 @@ metadata:
   name: labels
   labels:
     project: roboshop
-    purpose: poc
+    component: frontend
     environment: Dev
 spec:
   containers:
