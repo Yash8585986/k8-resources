@@ -2,7 +2,7 @@ apiVersion: v1
 Kind: pod
 metadata:
   name: service-test
-  spec:
+spec:
     containers:
     - name: almalinux
       image: almalinux:9
