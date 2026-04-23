@@ -15,7 +15,7 @@ spec:
       project: roboshop
       component: frontend
       purpose: rs-demo
-    tier: frontend
+      tier: frontend
   template:
     metadata:
       labels:
