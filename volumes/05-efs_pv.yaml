@@ -14,32 +14,32 @@ spec:
     driver: efs.csi.aws.com
     volumeHandle: fs-0626281c77cb2577d
 ---
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: efs-pv
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: ""
-  resources:
-    requests:
-      storage: 5Gi
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: app
-spec:
-  containers:
-  - name: nginx
-    image: nginx:latest
-    volumeMounts:
-    - name: html-data
-      mountPath: /usr/share/nginx/html
-  nodeSelector:
-    topology.kubernetes.io/zone: us-east-1b
-  volumes:
-  - name: html-data
-    persistentVolumeClaim:
-      claimName: efs-pv
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: efs-pv
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   storageClassName: ""
+#   resources:
+#     requests:
+#       storage: 5Gi
+# ---
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: app
+# spec:
+#   containers:
+#   - name: nginx
+#     image: nginx:latest
+#     volumeMounts:
+#     - name: html-data
+#       mountPath: /usr/share/nginx/html
+#   nodeSelector:
+#     topology.kubernetes.io/zone: us-east-1b
+#   volumes:
+#   - name: html-data
+#     persistentVolumeClaim:
+#       claimName: efs-pv
