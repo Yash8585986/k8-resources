@@ -14,17 +14,17 @@ spec:
     driver: efs.csi.aws.com
     volumeHandle: fs-0626281c77cb2577d
 ---
-# apiVersion: v1
-# kind: PersistentVolumeClaim
-# metadata:
-#   name: efs-pv
-# spec:
-#   accessModes:
-#     - ReadWriteOnce
-#   storageClassName: ""
-#   resources:
-#     requests:
-#       storage: 5Gi
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: efs-pv
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: ""
+  resources:
+    requests:
+      storage: 5Gi
 # ---
 # apiVersion: v1
 # kind: Pod
