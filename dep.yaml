@@ -43,7 +43,7 @@ kind: Service
 metadata:
   name: nginx
 spec:
-  clusterip: None
+  clusterIP: None
   selector:
       project: roboshop
       component: frontend
